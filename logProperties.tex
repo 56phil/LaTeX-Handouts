@@ -1,0 +1,40 @@
+\documentclass[letterpaper,final]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage{fullpage}
+
+\author{Philip R. Huffman}
+\date{2007-05-07}
+
+\begin{document}
+  \pagestyle{empty}
+  \begin{Huge}
+    \begin{center}
+      Properties of Logarithms
+      \vskip .3in
+      \boxed{$$y=log_ax\Leftrightarrow a^y=x$$}
+    \end{center}
+  \end{Huge}
+  \vskip .2in
+  \begin{large}
+    \begin{enumerate}
+        \item $\log_a 1=0\Leftrightarrow a^0=1$\bigskip
+        \item $\log_a a=1\Leftrightarrow a^1=a$\bigskip
+        \item $\log_a a^x=x\Leftrightarrow a^{log_a x} = x$\hfill\textbf{Inverse Property}\bigskip
+        \item $\log_a x = log_a y \Leftrightarrow x=y$\hfill\textbf{One-to-One Property}\bigskip
+        \item $\log_a(uv)\Leftrightarrow \log_au+\log_av$\hfill\textbf{Product Property}\bigskip
+        \item $\log_a\frac{u}{v}\Leftrightarrow \log_au-log_av$\hfill\textbf{Quotient Property}\bigskip
+        \item $\log_au^n\Leftrightarrow n\log_au$\hfill\textbf{Power Property}\bigskip
+        \item $\log_bu=\dfrac{\ln u}{\ln b}=\dfrac{\log u}{\log b}$\hfill\textbf{Change of Base Formula}\bigskip
+        \item $P(t)=P_{0}e^{rt}$\hfill\textbf{Continuously Compounded Interest Formula}\bigskip
+        \item $f(x)=ae^{bx}$\hfill\textbf{Exponential Growth Model}\bigskip
+        \item $f(x)=ae^{-bx}$\hfill\textbf{Exponential Decay Model}\bigskip
+        \item $f(x)=e^{-\frac{(x-b)^2}{c}}$\hfill\textbf{Gaussian Model}\bigskip
+        \item $f(x)=\dfrac{a}{1+be^{-rx}}$\hfill\textbf{Logistic Model}\bigskip
+        \item $f(x)=a+b\log_bx, b>0, b\neq 1$\hfill\textbf{Logarithmic Model}\bigskip
+    \end{enumerate}
+  \end{large}
+\end{document}

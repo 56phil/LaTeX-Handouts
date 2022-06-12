@@ -1,0 +1,44 @@
+\documentclass{amsart}
+\usepackage[margin=1in,centering]{geometry}
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{booktabs} % for much better looking tables
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{tikz} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{sagetex} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{cmbright}
+\usepackage[american]{babel}
+% 
+\usepackage{fancyhdr}
+\pagestyle{fancyplain} 
+\fancyhead[co]{\textbf{\huge{Pascal's Triangle}}}
+\fancyfoot[l]{\tiny{Prepared using \LaTeX}}
+\fancyfoot[r]{\textcopyright\tiny{\today Philip R. Huffman}}
+\fancyfoot[c]{}
+\linespread{1.5}
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+The Binomial Coefficient $\dbinom{m}{n}$ for the expansion of $(a+b)^n$ can be found using Pascal's triangle:
+\[1\] \[1\qquad1\] \[1\qquad2\qquad1\] \[1\qquad3\qquad3\qquad1\] \[1\qquad4\qquad6\qquad4\qquad1\] \[1\qquad5\qquad10\qquad10\qquad5\qquad1\]
+\[1\qquad6\qquad15\qquad20\qquad15\qquad6\qquad1\] \[1\qquad7\qquad21\qquad35\qquad35\qquad21\qquad7\qquad1\]
+\[1\qquad8\qquad28\qquad56\qquad70\qquad56\qquad28\qquad8\qquad1\]
+\[1\qquad9\qquad36\qquad84\qquad126\qquad126\qquad84\qquad36\qquad9\qquad1\]
+Notice the patterns:
+\begin{enumerate}
+    \item Each row has one more coefficient than the previous row.
+    \item Each coefficient is the sum of the two coefficients above it.
+    \item $\dbinom{m}{n}=\dfrac{m!}{n!(m-n)!}$\\
+    Where $m$ and $n$ are nonnegative integers and $n\le m$. $m!\text{ (read ``m factorial'') } = 1\times2\times3\ldots m,\; 0!=1$
+    \item The $r$th term of an expansion is $\binom{n}{r-1}a^{n-r+1}b^{r-1}$
+\end{enumerate}
+\subsection*{Example:}Expand $(x+3)^5$.
+\[(x+3)^5\]
+\[1(x^5)(3^0)+5(x^4)(3^1)+10(x^3)(3^2)+10(x^2)(3^3)+5(x^1)(3^4)+1(x^0)(3^5)\]
+Notice that the exponents in each term add up to 5 and that the exponent of $x$ decreases by one in each term.
+\[x^5+15x^4+90x^3+270x^2+405x+243\]
+\subsection*{Example:}Expand $(2x-y^3)^7$
+\[\left[2x+(-y^3)\right] ^7\]
+\[(2x)^7+7(2x)^6(-y^3)+21(2x)^5\left(-y^3\right)^2+35(2x)^4\left(-y^3\right) ^3 + 35(2x)^3\left(-y^3\right) ^4 + 21(2x)^2\left(-y^3\right)^5+7(2x)\left(-y^3\right)^6+\left(-y^3\right)^7\]
+\[128x^7-448x^6y^3+672x^5y^6-560x^4y^9+280x^3y^{12}-84x^2y^{15}+14xy^{18}-y^{21}\]
+\end{document}
