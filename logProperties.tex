@@ -1,25 +1,34 @@
-\documentclass[letterpaper,final]{article}
-
-\usepackage[latin1]{inputenc}
-\usepackage{amsmath,amssymb,amsthm}
+\documentclass{amsart}
+\usepackage[top=1in,bottom=1in,right=1in,left=1in,headsep=.5in,footskip=0.5in,centering]{geometry}
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{booktabs} % for much better looking tables
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{tikz} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{sagetex} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage[american]{babel}
-\usepackage[T1]{fontenc}
-%\usepackage{fullpage}
-
-\author{Philip R. Huffman}
-\date{2007-05-07}
+%\usepackage{cmbright}
+% 
+\usepackage{fancyhdr}
+\pagestyle{fancyplain} 
+\fancyhead[co]{\textbf{\huge{Properties of Logarithms}}}
+\fancyfoot[l]{\tiny{Prepared using \LaTeX}}
+\fancyfoot[r]{\textcopyright\tiny{\today Philip R. Huffman}}
+\fancyfoot[c]{}
 
 \begin{document}
-  \pagestyle{empty}
-  \begin{Huge}
-    \begin{center}
-      Properties of Logarithms
-      \vskip .3in
-      \boxed{$$y=log_ax\Leftrightarrow a^y=x$$}
-    \end{center}
-  \end{Huge}
-  \vskip .2in
+ % \pagestyle{empty}
+%  \begin{Huge}
+%    \begin{center}
+%      Properties of Logarithms
+%      \vskip .3in
+%      \boxed{$$y=log_ax\Leftrightarrow a^y=x$$}
+%    \end{center}
+ % \end{Huge}
+ % \vskip .2in
   \begin{large}
+  
     \begin{enumerate}
         \item $\log_a 1=0\Leftrightarrow a^0=1$\bigskip
         \item $\log_a a=1\Leftrightarrow a^1=a$\bigskip

@@ -5,7 +5,12 @@
 \usepackage[scaled=0.85]{berasans}
 \usepackage[scaled=0.85]{beramono}
 
-\pagestyle{empty}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain} 
+\fancyhead[co]{\textbf{\huge{Valid Syllogistic Forms}}}
+\fancyfoot[l]{\tiny{Prepared using \LaTeX}}
+\fancyfoot[r]{\textcopyright\tiny{\today Philip R. Huffman}}
+\fancyfoot[c]{}
 
 %set up row spacing
 \def\rowa{0mm}
@@ -26,7 +31,7 @@
 \def\mCircle{(60:11mm) circle (11mm)}
 \def\pCircle{(0:11mm) circle (11mm)}
 
-%define the Venn diagram with lables
+%define the Venn diagram with labels
 \def\venn{%
      \draw \sCircle; 
      \draw \mCircle; 
@@ -85,9 +90,9 @@
 
 \begin{document}
     \begin{center}
-        \begin{huge}
-            Valid Syllogistic Forms\vspace{.25in}
-        \end{huge}
+%        \begin{huge}
+%            Valid Syllogistic Forms\vspace{.25in}
+%        \end{huge}
 
         \begin{tikzpicture}[scale=0.725]
     %
